@@ -297,8 +297,9 @@ if option == 'Lybrate':
     clinics__l = []
     speciality_l=[]
     def lybrate(website,loc, k):
-        driver = Driver()
+#         driver = Driver()
         for lo in loc:
+            driver = Driver()
             driver.get('https://www.lybrate.com/')
             book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
             time.sleep(3)
@@ -542,6 +543,7 @@ if option == 'Lybrate':
                 print('finished')
                 # n = min(len(links),len(doctor_name_l),len(personal_statement_l),len(specialization_l),len(Other_treatment_areas_l),len(qualifications_l),len(experience_l),len(cost_l) ,len(Education_l),len(Past_Experience_l) ,len(Languages_spoken_l) ,len(Awards_and_Recognitions_l),len(Professional_Memberships_),len(rating_l) ,len(clinics__l) ,len(speciality_l))
                 print(len(links),len(doctor_name_l),len(personal_statement_l),len(specialization_l),len(Other_treatment_areas_l),len(qualifications_l),len(experience_l),len(cost_l) ,len(Education_l),len(Past_Experience_l) ,len(Languages_spoken_l) ,len(Awards_and_Recognitions_l),len(Professional_Memberships_),len(rating_l) ,len(clinics__l) ,len(speciality_l))
+                driver.quit()
                 # print(n)
                 # # print(len(n))
                 # links = links[:n]
