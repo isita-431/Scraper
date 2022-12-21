@@ -11,7 +11,7 @@ sklearn
 dmba
 selenium
 beautifulsoup4
-traceback
+traceback2
 time
 os
 webdriver-manager
