@@ -12,6 +12,6 @@ dmba
 selenium
 beautifulsoup4
 traceback2
-time
+python-time
 os
 webdriver-manager
