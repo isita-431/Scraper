@@ -13,5 +13,5 @@ selenium
 beautifulsoup4
 traceback2
 python-time
-os
+os-sys
 webdriver-manager
