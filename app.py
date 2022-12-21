@@ -22,7 +22,6 @@ from bs4 import BeautifulSoup
 import traceback
 import time
 import sys
-import os
 import pandas as pd
 # conn = sqlite3.connect('data.db',check_same_thread=False)
 # cur = conn.cursor()
