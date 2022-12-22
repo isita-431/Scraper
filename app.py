@@ -308,7 +308,7 @@ if option == 'Lybrate':
             options.add_argument('--disable-gpu')
             options.add_argument('--headless')
             options.add_argument("--enable-popup-blocking")
-            options..add_argument('--disable-notifications')
+            options.add_argument('--disable-notifications')
             driver = Driver()
             driver.get('https://www.lybrate.com/')
             book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
