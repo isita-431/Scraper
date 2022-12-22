@@ -1,9 +1,5 @@
 import streamlit as st 
 import pandas as pd 
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
-import sys
-import os
 import streamlit.components.v1 as stc
 import matplotlib.pyplot as plt
 import sqlite3
@@ -21,7 +17,6 @@ from selenium.webdriver import ActionChains
 from bs4 import BeautifulSoup
 import traceback
 import time
-import sys
 import pandas as pd
 # conn = sqlite3.connect('data.db',check_same_thread=False)
 # cur = conn.cursor()
