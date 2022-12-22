@@ -588,7 +588,7 @@ if option == 'Lybrate':
         # print(len(n))
 
     lybrate(option,option4,option5)
-    df = pd.DataFrame({'links':li,'doctor_name': doctor_name_l, 'rating':rating_l,'personal_statement': personal_statement_l,'specialization':specialization_l,'Other_treatment_areas':Other_treatment_areas_l,'qualifications':qualifications_l[:n],'experience':experience_l,'cost': cost_l,'Education':Education_l,'Past_Experience':Past_Experience_l,
+    df = pd.DataFrame({'links':li,'doctor_name': doctor_name_l, 'rating':rating_l,'personal_statement': personal_statement_l,'specialization':specialization_l,'Other_treatment_areas':Other_treatment_areas_l,'qualifications':qualifications_l,'experience':experience_l,'cost': cost_l,'Education':Education_l,'Past_Experience':Past_Experience_l,
         'Awards_and_Recognitions':Awards_and_Recognitions_l, 'clinics':clinics__l})
 
     @st.cache
