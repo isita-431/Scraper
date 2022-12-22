@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import streamlit.components.v1 as stc
 import matplotlib.pyplot as plt
-import sqlite3
+# import sqlite3
 import csv
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
@@ -34,21 +34,25 @@ time.sleep(30)
 
 st.write('You selected:', option)
 
+# @st.experimental_singleton
+# def Driver():
+#     chrome_options = webdriver.ChromeOptions()
+# #     output_path = os.path.join(os.getcwd(),'output')
+# #     download_excel_prefs = {"download.default_directory" : output_path}
+# #     chrome_options.add_experimental_option("prefs",download_excel_prefs)   
+#     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+#     chrome_options.add_experimental_option("detach", True)
+#     chrome_options.add_argument('--headless')
+#     chrome_options.add_argument("--enable-popup-blocking")
+#     chrome_options.add_argument('--disable-notifications')
+# #     chrome_path = ChromeDriverManager().install()
+#     driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
+#     time.sleep(3)
+#     return driver
 @st.experimental_singleton
 def Driver():
-    chrome_options = webdriver.ChromeOptions()
-#     output_path = os.path.join(os.getcwd(),'output')
-#     download_excel_prefs = {"download.default_directory" : output_path}
-#     chrome_options.add_experimental_option("prefs",download_excel_prefs)   
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    chrome_options.add_experimental_option("detach", True)
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument("--enable-popup-blocking")
-    chrome_options.add_argument('--disable-notifications')
-#     chrome_path = ChromeDriverManager().install()
-    driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
-    time.sleep(3)
-    return driver
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
 
 if option == 'Credihealth':
     # time.sleep(30)
@@ -79,6 +83,11 @@ if option == 'Credihealth':
         doctor_links=[]
         
         for lo in loc:
+            options = Options()
+            options.add_argument('--disable-gpu')
+            options.add_argument('--headless')
+            options.add_argument("--enable-popup-blocking")
+            options..add_argument('--disable-notifications')
             driver = Driver()
             driver.get('https://www.credihealth.com')
             #     driver.get('https://www.credihealth.com')
@@ -296,6 +305,10 @@ if option == 'Lybrate':
     def lybrate(website,loc, k):
 #         driver = Driver()
         for lo in loc:
+            options.add_argument('--disable-gpu')
+            options.add_argument('--headless')
+            options.add_argument("--enable-popup-blocking")
+            options..add_argument('--disable-notifications')
             driver = Driver()
             driver.get('https://www.lybrate.com/')
             book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
