@@ -51,8 +51,8 @@ st.write('You selected:', option)
 #     time.sleep(3)
 #     return driver
 @st.experimental_singleton
-def Driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+def Driver(options):
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options).delete_all_cookies()
 
 
 if option == 'Credihealth':
@@ -89,7 +89,7 @@ if option == 'Credihealth':
             options.add_argument('--headless')
             options.add_argument("--enable-popup-blocking")
             options.add_argument('--disable-notifications')
-            driver = Driver()
+            driver = Driver(options)
             driver.get('https://www.credihealth.com')
             #     driver.get('https://www.credihealth.com')
                 # book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
@@ -311,7 +311,7 @@ if option == 'Lybrate':
             options.add_argument('--headless')
             options.add_argument("--enable-popup-blocking")
             options.add_argument('--disable-notifications')
-            driver = Driver()
+            driver = Driver(options)
             driver.get('https://www.lybrate.com/')
             book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
             time.sleep(3)
