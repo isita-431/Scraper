@@ -3,9 +3,6 @@ pandas
 scipy
 matplotlib
 streamlit
-pandas-profiling
-streamlit-pandas-profiling
-openpyxl
 xlrd
 sklearn
 dmba
