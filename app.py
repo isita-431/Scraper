@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd 
-import streamlit.components.v1 as stc
-import matplotlib.pyplot as plt
+# import streamlit.components.v1 as stc
+# import matplotlib.pyplot as plt
 # import sqlite3
 import csv
 from selenium import webdriver
@@ -53,8 +53,11 @@ st.write('You selected:', option)
 # @st.experimental_singleton
 # def Driver(_options):
 #     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=_options).delete_all_cookies()
-@st.experimental_singleton
+# @st.experimental_singleton
 def get_driver():
+    options = Options()
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
@@ -93,9 +96,6 @@ if option == 'Credihealth':
 #             options.add_argument("--enable-popup-blocking")
 #             options.add_argument('--disable-notifications')
 #             driver = Driver(options)
-            options = Options()
-            options.add_argument('--disable-gpu')
-            options.add_argument('--headless')
             driver = get_driver()
             driver.get('https://www.credihealth.com')
             #     driver.get('https://www.credihealth.com')
@@ -319,9 +319,9 @@ if option == 'Lybrate':
 #             options.add_argument("--enable-popup-blocking")
 #             options.add_argument('--disable-notifications')
 #             driver = Driver(options)
-            options = Options()
-            options.add_argument('--disable-gpu')
-            options.add_argument('--headless')
+#             options = Options()
+#             options.add_argument('--disable-gpu')
+#             options.add_argument('--headless')
             driver = get_driver()
             driver.get('https://www.lybrate.com/')
             book_appointment = driver.find_element(By.XPATH,"//span[@ga-event='Book_Appointment']")
