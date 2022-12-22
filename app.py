@@ -305,6 +305,7 @@ if option == 'Lybrate':
     def lybrate(website,loc, k):
 #         driver = Driver()
         for lo in loc:
+            options = Options()
             options.add_argument('--disable-gpu')
             options.add_argument('--headless')
             options.add_argument("--enable-popup-blocking")
