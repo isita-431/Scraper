@@ -45,7 +45,7 @@ def Driver():
     chrome_options.add_argument("--enable-popup-blocking")
     chrome_options.add_argument('--disable-notifications')
     chrome_path = ChromeDriverManager().install()
-    driver=webdriver.Chrome(chrome_path,options=chrome_options)
+    driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
     time.sleep(3)
     return driver
 
