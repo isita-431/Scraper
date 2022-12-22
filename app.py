@@ -38,7 +38,7 @@ def Driver():
     chrome_options = webdriver.ChromeOptions()
 #     output_path = os.path.join(os.getcwd(),'output')
 #     download_excel_prefs = {"download.default_directory" : output_path}
-    chrome_options.add_experimental_option("prefs",download_excel_prefs)   
+#     chrome_options.add_experimental_option("prefs",download_excel_prefs)   
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     chrome_options.add_argument('--headless')
     chrome_options.add_argument("--enable-popup-blocking")
