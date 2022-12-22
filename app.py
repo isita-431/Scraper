@@ -52,7 +52,7 @@ st.write('You selected:', option)
 #     return driver
 @st.experimental_singleton
 def Driver(_options):
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options).delete_all_cookies()
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=_options).delete_all_cookies()
 
 
 if option == 'Credihealth':
