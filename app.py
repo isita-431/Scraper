@@ -51,7 +51,7 @@ st.write('You selected:', option)
 #     time.sleep(3)
 #     return driver
 @st.experimental_singleton
-def Driver(options):
+def Driver(_options):
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options).delete_all_cookies()
 
 
