@@ -87,7 +87,7 @@ if option == 'Credihealth':
             options.add_argument('--disable-gpu')
             options.add_argument('--headless')
             options.add_argument("--enable-popup-blocking")
-            options..add_argument('--disable-notifications')
+            options.add_argument('--disable-notifications')
             driver = Driver()
             driver.get('https://www.credihealth.com')
             #     driver.get('https://www.credihealth.com')
