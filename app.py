@@ -34,6 +34,7 @@ time.sleep(30)
 
 st.write('You selected:', option)
 
+@st.experimental_singleton
 def Driver():
     chrome_options = webdriver.ChromeOptions()
 #     output_path = os.path.join(os.getcwd(),'output')
@@ -44,7 +45,7 @@ def Driver():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument("--enable-popup-blocking")
     chrome_options.add_argument('--disable-notifications')
-    chrome_path = ChromeDriverManager().install()
+#     chrome_path = ChromeDriverManager().install()
     driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
     time.sleep(3)
     return driver
