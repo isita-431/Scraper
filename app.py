@@ -36,7 +36,7 @@ st.write('You selected:', option)
 
 def Driver():
     chrome_options = webdriver.ChromeOptions()
-    output_path = os.path.join(os.getcwd(),'output')
+#     output_path = os.path.join(os.getcwd(),'output')
     download_excel_prefs = {"download.default_directory" : output_path}
     chrome_options.add_experimental_option("prefs",download_excel_prefs)   
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
