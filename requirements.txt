@@ -7,6 +7,7 @@ xlrd
 sklearn
 dmba
 selenium
+seleniumbase
 beautifulsoup4
 traceback2
 python-time
