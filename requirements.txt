@@ -1,6 +1,5 @@
 numpy
 pandas
-scipy
 matplotlib
 streamlit
 xlrd
