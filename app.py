@@ -40,6 +40,7 @@ def Driver():
 #     download_excel_prefs = {"download.default_directory" : output_path}
 #     chrome_options.add_experimental_option("prefs",download_excel_prefs)   
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    chrome_options.add_experimental_option("detach", True)
     chrome_options.add_argument('--headless')
     chrome_options.add_argument("--enable-popup-blocking")
     chrome_options.add_argument('--disable-notifications')
